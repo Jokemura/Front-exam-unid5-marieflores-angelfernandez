@@ -3,7 +3,7 @@ const input = document.querySelectorAll("#duedateforyment");
 const monto = document.querySelectorAll("amount");
 const select = document.querySelector("#service");
 
-boton.onsubmit = async function (event) {
+boton.onclick = async function (event) {
   event.preventDefault();
 
   const body = {

@@ -1,21 +1,21 @@
-const boton = document.querySelector("#boton");
-const input = document.querySelectorAll("#duedateforyment");
-const monto = document.querySelectorAll("amount");
-const select = document.querySelector("#service");
+const newS = document.querySelector("#NewServiceName");
+const prefix = document.querySelector("#prefix");
+const logo = document.querySelector("#logo");
+const buton = document.querySelector("#addbutton");
 
-boton.onsubmit = async function (event) {
+buton.onclick = async function (event) {
   event.preventDefault();
 
   const body = {
-    "name": select.value,
-    "paymentDate":input,
-    "amount":monto,
+    "name": newS.value,
+    "prefix":prefix.value,
+    "logo":logo.value,
 
   };
 
   
   try {
-    await fetch("http://127.0.0.1:8000/service", {
+    await fetch("http://127.0.0.1:8000/transactions/service", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ boton.onsubmit = async function (event) {
     });
 
     Swal.fire({
-      text: "Pago Agregado",
+      text: "Servicio Agregado",
       icon: "success",
     });
   } catch (error) {
