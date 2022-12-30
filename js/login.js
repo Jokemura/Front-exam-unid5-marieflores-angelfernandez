@@ -3,9 +3,9 @@ import validate from "./validate";
 import error_message from './messages.js'
 
 validate_token("index.html");
-const login_form = document.getElementById("form");
-const email = document.getElementById("email_input");
-const password = document.getElementById("password_input");
+const login_form = document.getElementById("loginForm");
+const email = document.getElementById("username");
+const password = document.getElementById("password");
 
 let user_login = async (event) => {
   event.preventDefault();
