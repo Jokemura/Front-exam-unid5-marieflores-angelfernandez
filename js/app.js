@@ -1,4 +1,4 @@
-const url = 'https://pokeapi.co/api/v2/pokemon/';
+const url = 'http://localhost:8000/transactions/service/';
 
 const container =document.querySelector(".row");
 
